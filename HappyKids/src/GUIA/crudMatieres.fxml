@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIA.CrudMatieresController">
+   <children>
+      <Label layoutX="15.0" layoutY="64.0" prefHeight="17.0" prefWidth="48.0" text="Nom">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="130.0" text="Sections">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="64.0" layoutY="84.0" />
+      <ChoiceBox fx:id="section" layoutX="64.0" layoutY="149.0" onDragDetected="#choiceBox" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="5.0" prefHeight="36.0" prefWidth="167.0" text="Matière">
+         <font>
+            <Font name="Bodoni MT Black" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="ajouter" layoutX="37.0" layoutY="213.0" mnemonicParsing="false" onAction="#ajouterMatiere" text="Ajouter" />
+      <Button fx:id="modifier" layoutX="98.0" layoutY="213.0" mnemonicParsing="false" onAction="#modifierMatiere" text="modifier" />
+      <Button fx:id="supprimer" layoutX="178.0" layoutY="213.0" mnemonicParsing="false" onAction="#supprimerMatiere" text="supprimer" />
+      <TableView fx:id="table_matiere" layoutX="266.0" prefHeight="400.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="nomMatiere" prefWidth="172.0" text="Nom matière" />
+            <TableColumn fx:id="sectionMatiere" prefWidth="168.0" text="sections" />
+        </columns>
+      </TableView>
+      <Label fx:id="error_name" layoutX="151.0" layoutY="113.0" prefHeight="17.0" prefWidth="99.0" />
+      <Label fx:id="error_section" layoutX="137.0" layoutY="183.0" prefHeight="17.0" prefWidth="115.0" />
+   </children>
+</AnchorPane>
